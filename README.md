@@ -1,4 +1,4 @@
-# SundryEGA
+# SundryEGA [![Build Status](https://travis-ci.org/dnguyensr/SundryEGA.svg?branch=master)](https://travis-ci.org/dnguyensr/SundryEGA) [![Coverage Status](https://coveralls.io/repos/github/dnguyensr/SundryEGA/badge.svg?branch=master)](https://coveralls.io/github/dnguyensr/SundryEGA?branch=master)
 
 ## Configuration
 
