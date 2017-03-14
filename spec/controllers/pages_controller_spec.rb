@@ -5,6 +5,13 @@ RSpec.describe PagesController, type: :controller do
 		before { get :index }
 
 		it { should respond_with(200) }
-		it { should render_template('index') }
+		it { should render_template('application') }
+  end
+
+  describe "GET #gaming" do
+		before { get :gaming }
+
+		it { should respond_with(200) }
+		it { should render_template('application') }
   end
 end
