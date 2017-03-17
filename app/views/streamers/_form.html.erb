@@ -1,0 +1,53 @@
+<%= form_for(streamer) do |f| %>
+  <% if streamer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(streamer.errors.count, "error") %> prohibited this streamer from being saved:</h2>
+
+      <ul>
+      <% streamer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <div class="field">
+    <%= f.label :handle %>
+    <%= f.text_field :handle %>
+    </div>
+    <div class="field">
+    <%= f.label :profile %>
+    <%= f.text_area :profile %>
+    </div>
+    <div class="field">
+    <%= f.label :games %>
+    <%= f.text_field :games %>
+    </div>
+    <div class="field">
+    <%= f.label :avatar %>
+    <%= f.text_field :avatar %>
+    </div>
+    <div class="field">
+    <%= f.label :twitch %>
+    <%= f.text_field :twitch %>
+    </div>
+    <div class="field">
+    <%= f.label :youtube %>
+    <%= f.text_field :youtube %>
+    </div>
+    <div class="field">
+    <%= f.label :twitter %>
+    <%= f.text_field :twitter %>
+    </div>
+    <div class="field">
+    <%= f.label :instagram %>
+    <%= f.text_field :instagram %>
+    </div>
+    <div class="field">
+    <%= f.label :facebook %>
+    <%= f.text_field :facebook %>
+    </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
