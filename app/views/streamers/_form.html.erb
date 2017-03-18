@@ -1,0 +1,55 @@
+<%= form_for(streamer, :html => {class: "form-horizontal"}) do |f| %>
+  <% if streamer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(streamer.errors.count, "error") %> prohibited this streamer from being saved:</h2>
+
+      <ul>
+      <% streamer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="form-streamer">
+    <div class="form-group">
+      <%= f.label "Handle (Required)" %>
+      <%= f.text_field :handle, class:"form-control", placeholder: "Handle" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :profile %>
+      <%= f.text_area :profile, rows: "4", class:"form-control", placeholder: "Profile blurb" %>
+    </div>
+    <div class="form-group">
+      <%= f.label "Games (Required)" %>
+      <%= f.text_field :games, class:"form-control", placeholder: "Games" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :avatar %>
+      <%= f.text_field :avatar, class:"form-control", placeholder: "Avatar" %>
+    </div>
+    <div class="form-group">
+      <%= f.label "Twitch (Required)" %>
+      <%= f.text_field :twitch, class:"form-control", placeholder: "Twitch URL" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :youtube %>
+      <%= f.text_field :youtube, class:"form-control", placeholder: "Youtube URL" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :twitter %>
+      <%= f.text_field :twitter, class:"form-control", placeholder: "Twitter URL" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :instagram %>
+      <%= f.text_field :instagram, class:"form-control", placeholder: "Instagram URL" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :facebook %>
+      <%= f.text_field :facebook, class:"form-control", placeholder: "Facebook URL" %>
+    </div>
+
+    <div class="actions text-center">
+      <%= f.submit "Submit", class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>
