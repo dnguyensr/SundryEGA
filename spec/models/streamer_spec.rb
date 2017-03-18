@@ -1,5 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Streamer, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { should validate_presence_of(:handle) }
+  it { should validate_presence_of(:profile) }
+  it { should validate_presence_of(:games) }
+  it { should validate_presence_of(:twitch) }
 end

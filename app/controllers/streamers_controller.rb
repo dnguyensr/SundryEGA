@@ -1,11 +1,9 @@
 class StreamersController < ApplicationController
   before_action :set_streamer, only: [:show, :edit, :update, :destroy]
 
-
   def index
     @streamers = Streamer.all
   end
-
 
   def show
   end
@@ -19,7 +17,7 @@ class StreamersController < ApplicationController
 
   def create
     @streamer = Streamer.new
-    @streamer.user_id = current_user.id
+    # @streamer.user_id = current_user.id
     @streamer = Streamer.new(streamer_params)
     respond_to do |format|
       if @streamer.save
@@ -54,11 +52,11 @@ class StreamersController < ApplicationController
   end
 
   private
-    def set_streamer
-      @streamer = Streamer.find(params[:id])
-    end
-
-    def streamer_params
-      params.require(:streamer).permit(:user_id)
-    end
+  def set_streamer
+    @streamer = Streamer.find(params[:id])
   end
+
+  def streamer_params
+    params.require(:streamer).permit(:user_id)
+  end
+end
