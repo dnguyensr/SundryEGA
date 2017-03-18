@@ -6,6 +6,7 @@ class CreatePhotographers < ActiveRecord::Migration[5.0]
       t.string :avatar
       t.string :flickr
       t.string :youtube
+      t.string :instagram
       t.string :facebook
       t.string :twitter
       t.string :tistory

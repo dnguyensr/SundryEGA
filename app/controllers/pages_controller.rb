@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   end
 
   def studio
+    @photographers = Photographer.all
   end
 
   def gaming

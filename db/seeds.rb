@@ -8,3 +8,6 @@
 Streamer.create(handle: "MonaLisa", profile: "Mona Lisa profile", games: "Overwatch", avatar: "http://i.imgur.com/nXOOWK0.jpg", twitch: "placeholder", youtube: "placeholder", twitter: "placeholder", instagram: "placeholder", facebook: "placeholder")
 Streamer.create(handle: "TheScream", profile: "Edvard Munch's The Scream", games: "DOTA2", avatar: "http://i.imgur.com/3ruFAxZ.jpg", twitch: "placeholder", youtube: "placeholder", twitter: "placeholder", instagram: "placeholder", facebook: "placeholder")
 Streamer.create(handle: "Henry8", profile: "Henry VIII by Hans Holbein the Younger", games: "League of Legends", avatar: "http://i.imgur.com/aOFUYbn.jpg", twitch: "placeholder", youtube: "placeholder", twitter: "placeholder", instagram: "placeholder", facebook: "placeholder")
+Photographer.create(handle: "MonaLisa", profile: "Mona Lisa profile", avatar: "http://i.imgur.com/nXOOWK0.jpg", flickr: "placeholder", youtube: "placeholder", twitter: "placeholder", instagram: "placeholder", facebook: "placeholder", tistory: "placeholder")
+Photographer.create(handle: "TheScream", profile: "Edvard Munch's The Scream", avatar: "http://i.imgur.com/3ruFAxZ.jpg", flickr: "placeholder", youtube: "placeholder", twitter: "placeholder")
+Photographer.create(handle: "Henry8", profile: "Henry VIII by Hans Holbein the Younger", avatar: "http://i.imgur.com/aOFUYbn.jpg")
