@@ -1,0 +1,26 @@
+<div class="container-fluid" id="studio">
+  <div class="container">
+    <div class="row">
+      <h1>Studio Sundry</h1>
+      <hr>
+      <% @photographers.each do |photographer| %>
+      <div class="col-xs-12 col-sm-6 gaming-profile">
+        <div class="row">
+          <div class="col-xs-3">
+            <%= image_tag(photographer.avatar, class:"img-responsive")%>
+          </div>
+          <div class="col-xs-9">
+            <h1 class="gamertag"><%= photographer.handle %></h1>
+            <p><%= photographer.profile %></p>
+            <div class="sns">
+              <%= link_to image_tag("icons/icon_youtube", alt:"youtube icon", class:"img-responsive sns-icon"), photographer.youtube if !photographer.youtube.nil? %>
+              <%= link_to image_tag("icons/icon_twitter", alt:"twitter icon", class:"img-responsive sns-icon"), photographer.twitter if !photographer.twitter.nil? %>
+              <%= link_to image_tag("icons/icon_instagram", alt:"instagram icon", class:"img-responsive sns-icon"), photographer.instagram  if !photographer.instagram.nil? %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
