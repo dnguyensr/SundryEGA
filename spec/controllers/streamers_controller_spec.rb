@@ -34,9 +34,8 @@ RSpec.describe StreamersController, type: :controller do
   describe "POST #create" do
 		before { post :create, params: { streamer: attributes_for(:streamer)} }
 
-		it { should respond_with(200) }
-    # TODO: test for redirect
-		# it { should redirect_to(streamer_path(Streamer.last)) }
+		it { should respond_with(302) }
+		it { should redirect_to(streamers_path) }
   end
 
   # TODO: tests for update
