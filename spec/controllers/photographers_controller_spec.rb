@@ -1,6 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe PhotographersController, type: :controller do
+  let(:valid_attributes) { FactoryGirl.attributes_for(:photographer)}
+  let(:invalid_attributes) { { profile: "profile", id: 9 } }
+
+
   describe "GET #index" do
 		before { get :index }
 
@@ -32,12 +36,34 @@ RSpec.describe PhotographersController, type: :controller do
   end
 
   describe "POST #create" do
-		before { post :create, params: { photographer: attributes_for(:photographer)} }
+    context "with valid params" do
+  		before { post :create, params: { :photographer => valid_attributes} }
 
-		it { should respond_with(302) }
-		it { should redirect_to(photographers_path) }
+      it { should respond_with(302) }
+      it { should redirect_to(photographers_path) }
+    end
+
+    context "with invalid params" do
+      before { post :create, params: { :photographer => invalid_attributes} }
+      it { should respond_with(200) }
+    end
+  end
+
+  describe "DELETE #destroy" do
+    before :each do
+      @valid_photographer = FactoryGirl.create(:photographer)
+    end
+
+    it "deletes photographer" do
+      expect { delete :destroy, params: {id: @valid_photographer.id} }.to change(Photographer, :count).by(-1)
+    end
+
+    it "redirects to photographers#index" do
+      delete :destroy, params: {id: @valid_photographer}
+      expect(response).to have_http_status(302)
+      expect(response).to redirect_to(photographers_path)
+    end
   end
 
   # TODO: tests for update
-  # TODO: tests for destroy
 end
