@@ -56,6 +56,6 @@ class PhotographersController < ApplicationController
   end
 
   def photographer_params
-    params.require(:photographer).permit(:handle, :profile, :avatar, :flickr, :youtube, :instagram, :facebook, :twitter, :tistory)
+    params.require(:photographer).permit(:handle, :profile, :avatar, :flickr, :youtube, :instagram, :facebook, :twitter, :tistory, :user_id)
   end
 end
