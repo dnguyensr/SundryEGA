@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first):
+user = User.create(username: "user", email: "user@user.com", password: "password")
+admin = User.create(username: "admin", email: "admin@admin.com", password: "password")
 Streamer.create(handle: "MonaLisa", profile: "Mona Lisa profile", games: "Overwatch", avatar: "http://i.imgur.com/nXOOWK0.jpg", twitch: "placeholder", youtube: "placeholder", twitter: "placeholder", instagram: "placeholder", facebook: "placeholder")
 Streamer.create(handle: "TheScream", profile: "Edvard Munch's The Scream", games: "DOTA2", avatar: "http://i.imgur.com/3ruFAxZ.jpg", twitch: "placeholder", youtube: "placeholder", twitter: "placeholder", instagram: "placeholder", facebook: "placeholder")
 Streamer.create(handle: "Henry8", profile: "Henry VIII by Hans Holbein the Younger", games: "League of Legends", avatar: "http://i.imgur.com/aOFUYbn.jpg", twitch: "placeholder", youtube: "placeholder", twitter: "placeholder", instagram: "placeholder", facebook: "placeholder")
