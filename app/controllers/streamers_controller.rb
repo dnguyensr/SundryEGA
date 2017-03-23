@@ -21,7 +21,7 @@ class StreamersController < ApplicationController
     @streamer = Streamer.new(streamer_params)
     respond_to do |format|
       if @streamer.save
-        format.html { redirect_to streamer_path, notice: 'Streamer was successfully created.' }
+        format.html { redirect_to streamers_path, notice: 'Streamer was successfully created.' }
         format.json { render :index, status: :created, location: @streamer }
       else
         format.html { render :new }
@@ -57,6 +57,6 @@ class StreamersController < ApplicationController
   end
 
   def streamer_params
-    params.require(:streamer).permit(:user_id)
+    params.require(:streamer).permit(:handle, :profile, :games, :avatar, :twitch, :youtube, :twitter, :instagram, :facebook)
   end
 end

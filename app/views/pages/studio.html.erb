@@ -13,9 +13,9 @@
             <h1 class="gamertag"><%= photographer.handle %></h1>
             <p><%= photographer.profile %></p>
             <div class="sns">
-              <%= link_to image_tag("icons/icon_youtube", alt:"youtube icon", class:"img-responsive sns-icon"), photographer.youtube if !photographer.youtube.nil? %>
-              <%= link_to image_tag("icons/icon_twitter", alt:"twitter icon", class:"img-responsive sns-icon"), photographer.twitter if !photographer.twitter.nil? %>
-              <%= link_to image_tag("icons/icon_instagram", alt:"instagram icon", class:"img-responsive sns-icon"), photographer.instagram  if !photographer.instagram.nil? %>
+              <%= link_to image_tag("icons/icon_youtube", alt:"youtube icon", class:"img-responsive sns-icon"), photographer.youtube if photographer.youtube.present? %>
+              <%= link_to image_tag("icons/icon_twitter", alt:"twitter icon", class:"img-responsive sns-icon"), photographer.twitter if photographer.twitter.present? %>
+              <%= link_to image_tag("icons/icon_instagram", alt:"instagram icon", class:"img-responsive sns-icon"), photographer.instagram  if photographer.instagram.present? %>
             </div>
           </div>
         </div>
