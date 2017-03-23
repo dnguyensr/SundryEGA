@@ -20,7 +20,7 @@ class PhotographersController < ApplicationController
     @photographer = Photographer.new(photographer_params)
     respond_to do |format|
       if @photographer.save
-        format.html { redirect_to photographer_path, notice: 'Photographer was successfully created.' }
+        format.html { redirect_to photographers_path, notice: 'Photographer was successfully created.' }
         format.json { render :index, status: :created, location: @photographer }
       else
         format.html { render :new }
@@ -56,6 +56,6 @@ class PhotographersController < ApplicationController
   end
 
   def photographer_params
-    params.require(:photographer).permit(:user_id)
+    params.require(:photographer).permit(:handle, :profile, :avatar, :flickr, :youtube, :instagram, :facebook, :twitter, :tistory)
   end
 end

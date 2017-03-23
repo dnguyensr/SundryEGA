@@ -34,9 +34,8 @@ RSpec.describe PhotographersController, type: :controller do
   describe "POST #create" do
 		before { post :create, params: { photographer: attributes_for(:photographer)} }
 
-		it { should respond_with(200) }
-    # TODO: test for redirect
-		# it { should redirect_to(streamer_path(Streamer.last)) }
+		it { should respond_with(302) }
+		it { should redirect_to(photographers_path) }
   end
 
   # TODO: tests for update

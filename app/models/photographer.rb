@@ -1,3 +1,4 @@
 class Photographer < ApplicationRecord
-  validates :handle, :profile, presence: true
+  validates :handle, presence: true
+  validates :handle, uniqueness: true
 end
