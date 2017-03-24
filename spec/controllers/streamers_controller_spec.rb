@@ -8,7 +8,7 @@ RSpec.describe StreamersController, type: :controller do
 		before { get :index }
 
 		it { should respond_with(200) }
-		it { should render_template('application') }
+		it { should render_template('gaming') }
   end
 
   describe "GET #show" do
@@ -16,14 +16,14 @@ RSpec.describe StreamersController, type: :controller do
 		before { get :show, params: {id: @streamer.id} }
 
 		it { should respond_with(200) }
-		it { should render_template('application') }
+		it { should render_template('gaming') }
   end
 
   describe "GET #new" do
 		before { get :new }
 
 		it { should respond_with(200) }
-		it { should render_template('application') }
+		it { should render_template('gaming') }
   end
 
   describe "GET #edit" do
@@ -31,7 +31,7 @@ RSpec.describe StreamersController, type: :controller do
 		before { get :edit, params: {id: @streamer.id} }
 
 		it { should respond_with(200) }
-		it { should render_template('application') }
+		it { should render_template('gaming') }
   end
 
   describe "POST #create" do

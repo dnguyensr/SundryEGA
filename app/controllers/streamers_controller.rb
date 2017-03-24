@@ -1,5 +1,6 @@
 class StreamersController < ApplicationController
   before_action :set_streamer, only: [:show, :edit, :update, :destroy]
+  layout 'gaming'
 
   def index
     @streamers = Streamer.all
