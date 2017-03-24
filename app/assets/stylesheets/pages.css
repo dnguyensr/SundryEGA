@@ -35,6 +35,15 @@
 	display: none;
 }
 
+.alert {
+	padding: 0;
+	margin: 0;
+}
+
+.notice {
+	padding: 0;
+}
+
 /* Global nav */
 .global-nav > .row {
 	height: 50px;
@@ -121,18 +130,23 @@
 	width: 20%;
 	text-align: center;
 }
+/* footer */
+
+.footer ul li {
+	list-style: none;
+}
 
 /* pages gaming */
-body {
+#gaming {
   background-color: black;
   color: white;
 }
 
-#gaming .row > h1 {
+#gaming-pg .row > h1 {
   color: #C8C8C8;
 }
 
-#gaming hr {
+#gaming-pg hr {
   border-top: 6px solid #2F2F2F;
 }
 
