@@ -35,13 +35,6 @@ RSpec.describe StreamersController, type: :controller do
   end
 
   describe "POST #create" do
-		before { post :create, params: { streamer: attributes_for(:streamer)} }
-
-		it { should respond_with(302) }
-		it { should redirect_to(streamers_path) }
-  end
-
-  describe "POST #create" do
     context "with valid params" do
   		before { post :create, params: { :streamer => valid_attributes} }
 
@@ -52,6 +45,26 @@ RSpec.describe StreamersController, type: :controller do
     context "with invalid params" do
       before { post :create, params: { :streamer => invalid_attributes} }
       it { should respond_with(200) }
+    end
+  end
+
+  describe "#update" do
+    let(:attr) do
+      { handle: "eldnah", games: "semag"}
+    end
+
+    before(:each) do
+      @streamer = create(:streamer, handle: "handle2", games: "games", twitch: "twitch")
+      put :update, params: { :id => @streamer, streamer: attributes_for(:streamer, handle: attr[:handle], games: attr[:games])}
+      @streamer.reload
+    end
+    context "success" do
+      it { should respond_with(302) }
+      it { should redirect_to(@streamer) }
+      it "updates streamer" do
+        expect(@streamer.handle).to eq(attr[:handle])
+        expect(@streamer.games).to eq(attr[:games])
+      end
     end
   end
 
@@ -71,5 +84,4 @@ RSpec.describe StreamersController, type: :controller do
     end
   end
 
-  # TODO: tests for update
 end

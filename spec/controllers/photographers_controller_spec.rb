@@ -49,6 +49,25 @@ RSpec.describe PhotographersController, type: :controller do
     end
   end
 
+  describe "#update" do
+    let(:attr) do
+      { handle: "eldnah", flickr: "flickr"}
+    end
+
+    before(:each) do
+      @photographer = create(:photographer, handle: "handle2", flickr: "flickr")
+      put :update, params: { :id => @photographer, photographer: attributes_for(:photographer, handle: attr[:handle], flickr: attr[:flickr])}
+      @photographer.reload
+    end
+
+    it { should respond_with(302) }
+    it { should redirect_to(@photographer) }
+    it "updates photographer" do
+      expect(@photographer.handle).to eq(attr[:handle])
+      expect(@photographer.flickr).to eq(attr[:flickr])
+    end
+  end
+
   describe "DELETE #destroy" do
     before :each do
       @valid_photographer = FactoryGirl.create(:photographer)
