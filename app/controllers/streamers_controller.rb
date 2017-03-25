@@ -58,6 +58,6 @@ class StreamersController < ApplicationController
   end
 
   def streamer_params
-    params.require(:streamer).permit(:handle, :profile, :games, :avatar, :twitch, :youtube, :twitter, :instagram, :facebook)
+    params.require(:streamer).permit(:handle, :profile, :games, :avatar, :twitch, :youtube, :twitter, :instagram, :facebook, :user_id)
   end
 end
