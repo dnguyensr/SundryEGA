@@ -43,9 +43,9 @@ class PhotographersController < ApplicationController
 
 
   def destroy
-    @photographers.destroy
+    @photographer.destroy
     respond_to do |format|
-      format.html { redirect_to photographer_url, notice: 'Photographer was successfully destroyed.' }
+      format.html { redirect_to photographers_path, notice: 'Photographer was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
