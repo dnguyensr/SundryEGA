@@ -6,8 +6,8 @@
 
 This project uses Ruby 2.4.0.
 
-**ENV:**  
-Required ENV variables  
+**ENV:**
+Required ENV variables
 
 | ENV Variable | Value |
 |----|----|
@@ -15,13 +15,15 @@ Required ENV variables
 
 ## Development
 
+This branch has the [react-rails gem](https://github.com/reactjs/react-rails) installed.
+
 ### Styling
 Bootstrap 3 is included in the view template as CDN scripts and jQuery is included with the jquery-rails gem.
 
 ### Testing
 RSpec, Rails::Controller::Testing, Shoulda Matchers, and FactoryGirl gems are included and available to use in development and testing environments.
 
-To run all tests: `rspec` or `bundle exec rspec`  
+To run all tests: `rspec` or `bundle exec rspec`
 **Note**: prepending `bundle exec` may be required depending on your local settings
 
 To run specific tests:
