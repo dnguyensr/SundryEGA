@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :streamers, only: [:index, :create, :destroy, :update]
+      resources :photographers, only: [:index, :create, :destroy, :update]
     end
   end
 end
