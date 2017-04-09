@@ -38,6 +38,7 @@
 .alert {
 	padding: 0;
 	margin: 0;
+	border: 0;
 }
 
 .notice {
@@ -152,6 +153,20 @@
 
 #services > div > div > div {
 	border: 1px solid black;
+}
+
+#travel {
+
+}
+
+#travel nav ul {
+	list-style: none;
+	padding: 0;
+}
+
+#travel nav li,
+#travel nav h4 {
+	display: inline-block
 }
 
 /* pages gaming */
