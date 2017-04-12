@@ -8,6 +8,9 @@ class PagesController < ApplicationController
   def contact
   end
 
+  def travel
+  end
+
   def studio
     @photographers = Photographer.all
   end

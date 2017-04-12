@@ -38,10 +38,12 @@
 .alert {
 	padding: 0;
 	margin: 0;
+	border: 0;
 }
 
 .notice {
 	padding: 0;
+	margin: 0;
 }
 
 /* Global nav */
@@ -134,6 +136,37 @@
 
 .footer ul li {
 	list-style: none;
+}
+
+
+#sundryega ul {
+	padding: 0;
+}
+
+#sundryega ul li {
+	list-style: none;
+}
+
+#services > div > div {
+	padding: 15px;
+}
+
+#services > div > div > div {
+	border: 1px solid black;
+}
+
+#travel {
+
+}
+
+#travel nav ul {
+	list-style: none;
+	padding: 0;
+}
+
+#travel nav li,
+#travel nav h4 {
+	display: inline-block
 }
 
 /* pages gaming */
