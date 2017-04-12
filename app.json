@@ -1,0 +1,14 @@
+{
+  "name": "SundryEGA",
+  "description": "SundryEGA community site covering various interests",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+  ],
+  "buildpacks": [
+  ]
+}
