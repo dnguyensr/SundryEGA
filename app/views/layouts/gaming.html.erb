@@ -13,16 +13,7 @@
   </head>
 
   <body id="gaming">
-    <div class="container-fluid global-nav">
-      <div class="row">
-        <ul>
-          <li><%= link_to "SundryEGA", root_path %></li>
-          <li><%= link_to "Travel", travel_page_path %></li>
-          <li><%= link_to "Studio Sundry", studio_page_path %></li>
-          <li><%= link_to "Gaming", gaming_page_path %></li>
-        </ul>
-      </div>
-    </div>
+    <%= render partial: "shared/globalnav"%>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
