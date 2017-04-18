@@ -209,6 +209,10 @@
   max-height: 40px;
 }
 
+.nav-justified > li {
+	display: table-cell;
+}
+
 /* media queries */
 @media (min-width: 320px) {
 	.global-nav .row > ul {
