@@ -10,7 +10,7 @@ An EditorConfig plug-in is required for most text editors to conform to coding s
 
 ### Rails Environment
 
-This project uses Ruby 2.4.0. The rails/webpacker gem will be included in a future feature branch to install React and to prepare for migrating to Rails 5.1. Refer to the JavaScript section for system configuration. Foreman still also be required to run both the rails server and Webpack.
+This project uses Ruby 2.4.0. The rails/webpacker gem will be included in a future feature branch to install React and to prepare for migrating to Rails 5.1. Refer to the JavaScript section for system configuration. Foreman will also be required to run both the rails server and Webpack once React is added.
 
 **ENV:**
 Required ENV variables
