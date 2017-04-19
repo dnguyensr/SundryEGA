@@ -6,4 +6,10 @@ Rails.application.routes.draw do
   PagesController.action_methods.each do |action|
       get "/#{action}", to: "pages##{action}", as: "#{action}_page"
   end
+
+  scope '/travel' do
+    KoreaController.action_methods.each do |action|
+      get "/korea/#{action}", to: "korea##{action}", as: "korea_#{action}"
+    end
+  end
 end

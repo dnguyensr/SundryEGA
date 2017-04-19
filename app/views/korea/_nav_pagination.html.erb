@@ -1,0 +1,22 @@
+<nav aria-label="Page navigation" class="container-fluid">
+  <div class="container text-center">
+    <ul class="pagination">
+      <li>
+        <span><%= image_tag('flag_sk', class: 'img-responsive') %></span>
+      </li>
+      <!-- <li>
+        <a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+      </li> -->
+      <li><%= link_to 'Korea',korea_index_path %></li>
+      <li><%= link_to 'General', korea_korea01_path%></li>
+      <li><%= link_to 'Culture', korea_korea02_path%></li>
+      <li><%= link_to 'Entertainment', korea_korea03_path%></li>
+      <li><%= link_to 'Eats', korea_korea04_path%></li>
+      <li><%= link_to 'Areas', korea_korea05_path%></li>
+      <li><%= link_to 'Sample Itinerary', korea_korea06_path%></li>
+      <!-- <li>
+        <a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+      </li> -->
+    </ul>
+  </div>
+</nav>
