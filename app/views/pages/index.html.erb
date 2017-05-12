@@ -3,20 +3,22 @@
 
   </nav>
   <section class="row" id="carousel">
-    <h1 class="text-center">Carousel</h1>
+    <div class="col">
+      <h1 class="text-center">Carousel</h1>
+    </div>
   </section>
   <section class="row" id="sundryabout">
-    <div class="col-xs-8 col-xs-offset-2">
+    <div class="col">
       <h1 class="text-center">SundryEGA</h1>
       <p class="text-center">text blob</p>
     </div>
   </section>
   <section class="row" id="services">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
-      <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-0">
-        <div class="col-xs-12">
+    <div class="col">
+      <div class="row">
+        <div class="col-12 col-sm-4">
           <h3 class="text-center">Language Services</h3>
-          <%= image_tag("hello", class: "img-responsive")%>
+          <%= image_tag("hello", class: "img-fluid")%>
           <div class="services-text text-center">
             <ul>
               <li><h4>Translations</h4>
@@ -29,9 +31,7 @@
             </ul>
           </div>
         </div>
-      </div>
-      <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-0">
-        <div class="col-xs-12">
+        <div class="col-12 col-sm-4">
           <%#= image_tag("icons/langauges")%>
           <h3 class="text-center">Content Creation</h3>
           <div class="services-text text-center">
@@ -42,9 +42,7 @@
             </ul>
           </div>
         </div>
-      </div>
-      <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-0">
-        <div class="col-xs-12">
+        <div class="col-12 col-sm-4">
           <%#= image_tag("icons/langauges")%>
           <h3 class="text-center">Web & Applications Development</h3>
           <div class="services-text">
@@ -58,7 +56,8 @@
             </ul>
           </div>
         </div>
-        </div>
+
+      </div>
       </div>
     </div>
   </section>
