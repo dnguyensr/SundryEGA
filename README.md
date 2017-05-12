@@ -2,15 +2,37 @@
 
 SundryEGA is a multifaceted community site used for prototyping various ideas. The core site will consist of a business facing SundryEGA, a travel site under Sundry Travels, a photography community under Studio Sundry, and a gaming community under Gaming. Sundry Travels will be spun off into its own project once it is deemed sufficiently developed to serve as a standalone site.
 
-## Configuration
+
+## Environment
+
+### Ruby/Rails Version
+
+* Ruby 2.4.0
+* Rails 5.1.0
+
+### System Dependencies
+
+Rails 5.1.0 utilizes Webpacker which requires:
+
+* Ruby 2.2+
+* Node.js 6.4.0+
+* Yarn
+
+Foreman is required to run the rails server and webpack-dev-server concurrently
+
+* Foreman
+
+### App Dependencies
+
+Devise: The Devise gem is used to handle user authentication.
+
+### Configuration
 
 ### Text Editor
 
-An EditorConfig plug-in is required for most text editors to conform to coding styles defined in the editorconfig file.
+An EditorConfig plug-in is required for most text editors to conform to coding styles defined in the editorconfig file. EditorConfig plug-ins for some editors:  [Atom](https://atom.io/packages/editorconfig), [Sublime](https://github.com/sindresorhus/editorconfig-sublime), [VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 
 ### Rails Environment
-
-This project uses Ruby 2.4.0. The rails/webpacker gem will be included in a future feature branch to install React and to prepare for migrating to Rails 5.1. Refer to the JavaScript section for system configuration. Foreman will also be required to run both the rails server and Webpack once React is added.
 
 **ENV:**
 Required ENV variables
@@ -19,19 +41,17 @@ Required ENV variables
 |----|----|
 |SECRET_KEY_BASE| Devise required key base (generate with rails secret) |
 
-### JavaScript
-
-A feature branch will add React to the project. Yarn will be needed install dependencies and NPM may be required to install certain dependencies globally.
-
 
 ### Styling
-Bootstrap 3 is included in the view template as CDN scripts and jQuery is included with the jquery-rails gem.
+Bootstrap 4 is included in the view template as CDN scripts and jQuery is included with the jquery-rails gem.
 
 ## Development
 
+To run the rails server and webpack-dev-server concurrently:
+Run `foreman start`
 
 ### Testing
-RSpec, Rails::Controller::Testing, Shoulda Matchers, and FactoryGirl gems are included and available to use in development and testing environments.
+RSpec, Rails::Controller::Testing, Shoulda Matchers, and FactoryGirl, Capybara, and Selenium gems are included and available to use in development and testing environments.
 
 To run all tests: `rspec` or `bundle exec rspec`
 **Note**: prepending `bundle exec` may be required depending on your local settings
