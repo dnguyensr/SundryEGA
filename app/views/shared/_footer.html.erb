@@ -1,8 +1,17 @@
 <footer class="container-fluid footer">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-sm-4">
-        <h4 class="text-center">Site</h4>
+      <div class="col-12 col-sm-4">
+        <h4 class="text-center">Sundry Group</h4>
+        <ul class="list-group text-center">
+          <li><%= link_to "SundryEGA", root_path %></li>
+          <li><%= link_to "Sundry Travels", travel_page_path %></li>
+          <li><%= link_to "Studio Sundry", studio_page_path %></li>
+          <li><%= link_to "Gaming", gaming_page_path %></li>
+        </ul>
+      </div>
+      <div class="col-12 col-sm-4">
+        <h4 class="text-center">SundryEGA</h4>
         <ul class="list-group text-center">
           <li><%= link_to :Home, root_path %></li>
           <li><%= link_to :About, about_page_path%></li>
