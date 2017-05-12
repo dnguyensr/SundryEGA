@@ -17,8 +17,8 @@ gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .coffee assets and views
-# gem 'coffee-rails', '~> 4.2'
+# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
+gem 'webpacker'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -45,6 +45,9 @@ group :development, :test do
   gem 'shoulda-matchers', '~> 3.1'
   gem 'rails-controller-testing'
   gem 'factory_girl_rails'
+  # Adds support for Capybara system testing and selenium driver
+  gem 'capybara', '~> 2.13.0'
+  gem 'selenium-webdriver'
 end
 
 group :development do
