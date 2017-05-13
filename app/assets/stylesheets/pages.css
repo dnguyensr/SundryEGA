@@ -213,6 +213,12 @@
 	display: table-cell;
 }
 
+.carousel-inner img {
+  height: 500px;
+  width: 100%;
+}
+
+
 /* media queries */
 @media (min-width: 320px) {
 	.global-nav .row > ul {
