@@ -213,6 +213,11 @@
 	display: table-cell;
 }
 
+.carousel-item {
+  height: 300px;
+  background-size: cover;
+}
+
 /* media queries */
 @media (min-width: 320px) {
 	.global-nav .row > ul {

@@ -9,9 +9,40 @@
       </ul>
     </ul>
   </nav>
-  <section class="row" id="travel-carosel">
-    <h1 class="text-center">Carousel</h1>
-  </section>
+  <div id="carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel" data-slide-to="1"></li>
+      <li data-target="#carousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active" style="background-image: url(<%= asset_path 'travel/banpo.jpg' %>); background-position:center center">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Test<h3>
+          <p>Test<p>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image: url(<%= asset_path 'travel/banpo_riverscape.jpg' %>);background-position:center 80%">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Test<h3>
+          <p>Test<p>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image: url(<%= asset_path 'travel/banpo2.jpg' %>); background-position:center bottom">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Test<h3>
+          <p>Test<p>
+        </div>
+      </div>
+    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
   <section class="row" id="travelabout">
     <div class="col-xs-8 col-xs-offset-2">
       <h1 class="text-center">Sundry Travel</h1>
